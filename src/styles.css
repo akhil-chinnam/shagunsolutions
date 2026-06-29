@@ -8,6 +8,15 @@
   --brown-primary: #4A1800;
   --brown-medium: #6B2800;
   --amber: #D4870A;
+  --amber-04: rgba(212, 135, 10, 0.04);
+  --amber-08: rgba(212, 135, 10, 0.08);
+  --amber-10: rgba(212, 135, 10, 0.1);
+  --amber-12: rgba(212, 135, 10, 0.12);
+  --amber-15: rgba(212, 135, 10, 0.15);
+  --amber-20: rgba(212, 135, 10, 0.2);
+  --amber-25: rgba(212, 135, 10, 0.25);
+  --amber-30: rgba(212, 135, 10, 0.3);
+  --amber-40: rgba(212, 135, 10, 0.4);
   --amber-light: #F0A020;
   --amber-glow: #FFB830;
   --white: #FFFFFF;
@@ -181,6 +190,11 @@ body {
 @keyframes fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes scroll-pulse {
+  0% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+  100% { opacity: 0; transform: scaleY(0); transform-origin: top; }
 }
 
 @keyframes count-up {

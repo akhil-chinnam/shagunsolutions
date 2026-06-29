@@ -29,7 +29,7 @@
   inset: 0;
   background:
     radial-gradient(ellipse 80% 60% at 30% 50%, rgba(74, 24, 0, 0.7) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 80% at 80% 20%, rgba(212, 135, 10, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 80% at 80% 20%, var(--amber-08) 0%, transparent 50%),
     linear-gradient(180deg, #0D0500 0%, #080200 100%);
 }
 
@@ -37,8 +37,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(212, 135, 10, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(212, 135, 10, 0.04) 1px, transparent 1px);
+    linear-gradient(var(--amber-04) 1px, transparent 1px),
+    linear-gradient(90deg, var(--amber-04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -52,21 +52,21 @@
 
 .hex-1 {
   width: 80px; height: 80px;
-  background: rgba(212, 135, 10, 0.08);
+  background: var(--amber-08);
   top: 20%; right: 15%;
   animation-delay: 0s;
 }
 
 .hex-2 {
   width: 50px; height: 50px;
-  background: rgba(212, 135, 10, 0.12);
+  background: var(--amber-12);
   top: 60%; right: 8%;
   animation-delay: 2s;
 }
 
 .hex-3 {
   width: 35px; height: 35px;
-  background: rgba(212, 135, 10, 0.1);
+  background: var(--amber-10);
   top: 35%; left: 8%;
   animation-delay: 4s;
 }
@@ -74,7 +74,7 @@
 .hex-ring {
   position: absolute;
   z-index: 1;
-  border: 1px solid rgba(212, 135, 10, 0.15);
+  border: 1px solid var(--amber-15);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   animation: float 8s ease-in-out infinite;
 }
@@ -121,7 +121,7 @@
   font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #D4870A;
+  color: var(--amber);
   animation: slide-up 0.8s ease both;
 }
 
@@ -129,7 +129,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #D4870A;
+  background: var(--amber);
   animation: pulse-glow 2s ease infinite;
 }
 
@@ -142,9 +142,9 @@
   animation: slide-up 0.8s ease 0.1s both;
 }
 
-.line-1, .line-2 {
+.line-1, .line-2, .line-4 {
   font-size: clamp(3rem, 6vw, 5rem);
-  color: #FFFFFF;
+  color: var(--white);
   letter-spacing: -0.02em;
 }
 
@@ -153,14 +153,8 @@
   letter-spacing: -0.02em;
 }
 
-.line-4 {
-  font-size: clamp(3rem, 6vw, 5rem);
-  color: #FFFFFF;
-  letter-spacing: -0.02em;
-}
-
 .amber {
-  color: #D4870A;
+  color: var(--amber);
 }
 
 .hero-sub {
@@ -189,8 +183,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
-  background: rgba(212, 135, 10, 0.15);
-  border: 1px solid rgba(212, 135, 10, 0.15);
+  background: var(--amber-15);
+  border: 1px solid var(--amber-15);
   animation: slide-up 0.8s ease 0.4s both;
 }
 
@@ -205,14 +199,14 @@
 }
 
 .stat:hover {
-  background: rgba(212, 135, 10, 0.1);
+  background: var(--amber-10);
 }
 
 .stat-value {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 1.5rem;
-  color: #D4870A;
+  color: var(--amber);
   line-height: 1;
 }
 
@@ -247,14 +241,14 @@
 .orb-ring {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(212, 135, 10, 0.3);
+  border: 1px solid var(--amber-30);
   animation: rotate-slow linear infinite;
 }
 
 .orb-ring-1 {
   width: 300px; height: 300px;
   animation-duration: 20s;
-  border-color: rgba(212, 135, 10, 0.25);
+  border-color: var(--amber-25);
   border-style: dashed;
 }
 
@@ -262,13 +256,13 @@
   width: 220px; height: 220px;
   animation-duration: 15s;
   animation-direction: reverse;
-  border-color: rgba(212, 135, 10, 0.2);
+  border-color: var(--amber-20);
 }
 
 .orb-ring-3 {
   width: 150px; height: 150px;
   animation-duration: 10s;
-  border-color: rgba(212, 135, 10, 0.4);
+  border-color: var(--amber-40);
 }
 
 .orb-core {
@@ -290,9 +284,9 @@
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #D4870A;
-  background: rgba(212, 135, 10, 0.08);
-  border: 1px solid rgba(212, 135, 10, 0.3);
+  color: var(--amber);
+  background: var(--amber-08);
+  border: 1px solid var(--amber-30);
   padding: 8px 16px;
   clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
   animation: float 5s ease-in-out infinite;
@@ -326,19 +320,14 @@
   font-size: 0.6rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #D4870A;
+  color: var(--amber);
 }
 
 .scroll-line {
   width: 1px;
   height: 50px;
-  background: linear-gradient(to bottom, #D4870A, transparent);
+  background: linear-gradient(to bottom, var(--amber), transparent);
   animation: scroll-pulse 2s ease infinite;
-}
-
-@keyframes scroll-pulse {
-  0% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-  100% { opacity: 0; transform: scaleY(0); transform-origin: top; }
 }
 
 @media (max-width: 900px) {
