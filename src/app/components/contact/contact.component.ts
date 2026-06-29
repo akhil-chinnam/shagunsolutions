@@ -41,7 +41,7 @@ export class ContactComponent {
     {
       icon: '📍',
       label: 'Location',
-      value: 'Nuzvid, Andhra Pradesh, India',
+      value: 'Vijayawada, Andhra Pradesh, India',
       link: '#'
     }
   ];

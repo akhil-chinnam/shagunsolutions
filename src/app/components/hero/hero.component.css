@@ -1,6 +1,8 @@
 .hero {
+  --nav-offset: 88px;
   position: relative;
   min-height: 100vh;
+  padding-top: var(--nav-offset);
   display: flex;
   flex-direction: column;
   background: #080200;
@@ -100,8 +102,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  min-height: 100vh;
-  padding-top: 80px;
+  min-height: calc(100vh - var(--nav-offset));
 }
 
 /* Content */
