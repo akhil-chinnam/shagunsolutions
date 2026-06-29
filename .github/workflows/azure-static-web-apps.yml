@@ -39,7 +39,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: 'upload'
           app_location: '/'
-          output_location: 'dist/shagun-website/browser'
+          output_location: 'dist/shagun-website'
           skip_deploy_on_missing_secrets: true
 
   close_pull_request:
