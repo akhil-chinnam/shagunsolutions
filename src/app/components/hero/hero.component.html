@@ -1,0 +1,98 @@
+<section id="home" class="hero">
+  <!-- Animated network canvas -->
+  <canvas #canvas class="hero-canvas"></canvas>
+
+  <!-- Background layers -->
+  <div class="hero-bg">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+  </div>
+
+  <!-- Floating hex shapes -->
+  <div class="hex-float hex-1"></div>
+  <div class="hex-float hex-2"></div>
+  <div class="hex-float hex-3"></div>
+  <div class="hex-ring hex-ring-1"></div>
+  <div class="hex-ring hex-ring-2"></div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <!-- Eyebrow -->
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>Shagun Software Solutions Pvt. Ltd.</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-headline">
+        <span class="line-1">Innovating</span>
+        <span class="line-2">Today.</span>
+        <span class="line-3 amber">Transforming</span>
+        <span class="line-4">Tomorrow.</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="hero-sub">
+        We build intelligent, scalable and impactful software solutions that empower
+        <strong>governments</strong>, <strong>businesses</strong> and <strong>communities</strong>.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-actions">
+        <a class="btn-primary" (click)="scrollTo('services')">
+          <span>Explore Services</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M8 0l6 8-6 8V0z" opacity="0.8"/>
+          </svg>
+        </a>
+        <a class="btn-outline" (click)="scrollTo('contact')">
+          <span>Let's Talk</span>
+        </a>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="hero-stats">
+        <div class="stat" *ngFor="let s of stats">
+          <span class="stat-value">{{ s.value }}</span>
+          <span class="stat-label">{{ s.label }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Visual -->
+    <div class="hero-visual">
+      <div class="visual-orb">
+        <div class="orb-ring orb-ring-1"></div>
+        <div class="orb-ring orb-ring-2"></div>
+        <div class="orb-ring orb-ring-3"></div>
+        <div class="orb-core">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 10 L85 30 L85 70 L50 90 L15 70 L15 30 Z" stroke="#D4870A" stroke-width="1.5" fill="none" opacity="0.6"/>
+            <path d="M50 22 L75 36 L75 64 L50 78 L25 64 L25 36 Z" stroke="#D4870A" stroke-width="1" fill="none" opacity="0.4"/>
+            <circle cx="50" cy="50" r="12" fill="#D4870A" opacity="0.9"/>
+            <circle cx="50" cy="50" r="6" fill="#FAF7F2"/>
+            <!-- Connection dots -->
+            <circle cx="50" cy="10" r="3" fill="#D4870A"/>
+            <circle cx="85" cy="30" r="3" fill="#D4870A"/>
+            <circle cx="85" cy="70" r="3" fill="#D4870A"/>
+            <circle cx="50" cy="90" r="3" fill="#D4870A"/>
+            <circle cx="15" cy="70" r="3" fill="#D4870A"/>
+            <circle cx="15" cy="30" r="3" fill="#D4870A"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Floating tech tags -->
+      <div class="tech-tag tag-1">Angular</div>
+      <div class="tech-tag tag-2">.NET Core</div>
+      <div class="tech-tag tag-3">Cloud</div>
+      <div class="tech-tag tag-4">AI & ML</div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" (click)="scrollTo('about')">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>

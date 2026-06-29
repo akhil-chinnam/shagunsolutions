@@ -1,0 +1,147 @@
+.about {
+  padding: 110px 0;
+  background: var(--off-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.about-bg-shape {
+  position: absolute;
+  top: -100px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(212, 135, 10, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+}
+
+.location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(212, 135, 10, 0.08);
+  border: 1px solid rgba(212, 135, 10, 0.25);
+  border-left: 3px solid var(--amber);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+/* Right - Pillar Cards */
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pillar-card {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: var(--white);
+  border: 1px solid rgba(212, 135, 10, 0.1);
+  border-left: 4px solid var(--amber);
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.pillar-card:hover {
+  box-shadow: 0 8px 40px rgba(212, 135, 10, 0.12);
+  transform: translateX(4px);
+}
+
+.pillar-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 135, 10, 0.08);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.pillar-content h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+  margin-bottom: 8px;
+}
+
+.pillar-content p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-mid);
+}
+
+.pillar-content ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.pillar-content ul li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: rgba(212, 135, 10, 0.08);
+  padding: 4px 12px;
+  border: 1px solid rgba(212, 135, 10, 0.2);
+}
+
+.pillar-accent {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  background: rgba(212, 135, 10, 0.04);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+@media (max-width: 768px) {
+  .about { padding: 70px 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+}

@@ -1,0 +1,24 @@
+<section id="tech" class="tech-stack">
+  <div class="container">
+    <div class="tech-header">
+      <span class="section-label reveal">What We Build With</span>
+      <h2 class="section-title reveal reveal-delay-1">Technology <span>Stack</span></h2>
+      <p class="tech-subtitle reveal reveal-delay-2">
+        Modern, battle-tested technologies that power scalable enterprise solutions.
+      </p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card reveal" *ngFor="let s of stacks; let i = index" [class]="'reveal-delay-' + (i % 3 + 1)">
+        <div class="tech-card-header">
+          <span class="tech-icon">{{ s.icon }}</span>
+          <h3>{{ s.category }}</h3>
+        </div>
+        <div class="tech-pills">
+          <span class="pill" *ngFor="let t of s.techs">{{ t }}</span>
+        </div>
+        <div class="tech-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>

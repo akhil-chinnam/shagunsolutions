@@ -1,0 +1,27 @@
+<section id="solutions" class="solutions">
+  <div class="container">
+    <div class="solutions-header">
+      <div class="solutions-header-left">
+        <span class="section-label reveal">Our Solution Areas</span>
+        <h2 class="section-title reveal reveal-delay-1">Industries We <span>Transform</span></h2>
+      </div>
+      <p class="solutions-intro reveal reveal-delay-2">
+        From governance to agriculture, we bring technology where it matters most.
+      </p>
+    </div>
+
+    <div class="solutions-list">
+      <div class="solution-item reveal" *ngFor="let s of solutions; let i = index" [class]="'reveal-delay-' + (i % 3 + 1)">
+        <div class="solution-emoji">{{ s.emoji }}</div>
+        <div class="solution-body">
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.desc }}</p>
+          <div class="solution-tags">
+            <span *ngFor="let tag of s.tags">{{ tag }}</span>
+          </div>
+        </div>
+        <div class="solution-line"></div>
+      </div>
+    </div>
+  </div>
+</section>

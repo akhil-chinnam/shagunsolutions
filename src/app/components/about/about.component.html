@@ -1,0 +1,49 @@
+<section id="about" class="about">
+  <div class="about-bg">
+    <div class="about-bg-shape"></div>
+  </div>
+
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Text content -->
+      <div class="about-left">
+        <span class="section-label reveal">Who We Are</span>
+        <h2 class="section-title reveal reveal-delay-1">
+          Building the <span>Digital Future</span><br>of India & Beyond
+        </h2>
+        <p class="about-desc reveal reveal-delay-2">
+          Shagun Software Solutions Private Limited is a technology-driven company delivering
+          innovative software products, digital platforms, and enterprise solutions headquartered
+          in Nuzvid, Andhra Pradesh.
+        </p>
+        <p class="about-desc reveal reveal-delay-2">
+          We help organizations streamline operations, enhance transparency, and make data-driven
+          decisions through technology, automation, and intelligent analytics.
+        </p>
+
+        <!-- Location badge -->
+        <div class="location-badge reveal reveal-delay-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#D4870A">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span>Nuzvid, Andhra Pradesh, India</span>
+        </div>
+      </div>
+
+      <!-- Right: VMV cards -->
+      <div class="about-right">
+        <div class="pillar-card reveal" *ngFor="let p of pillars; let i = index" [class]="'reveal-delay-' + (i + 2)">
+          <div class="pillar-icon">{{ p.icon }}</div>
+          <div class="pillar-content">
+            <h3>{{ p.title }}</h3>
+            <p *ngIf="p.text">{{ p.text }}</p>
+            <ul *ngIf="p.items">
+              <li *ngFor="let item of p.items">{{ item }}</li>
+            </ul>
+          </div>
+          <div class="pillar-accent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

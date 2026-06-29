@@ -1,0 +1,127 @@
+.tech-stack {
+  padding: 110px 0;
+  background: var(--off-white);
+}
+
+.tech-header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.tech-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: var(--text-light);
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tech-card {
+  background: var(--white);
+  border: 1px solid rgba(212, 135, 10, 0.12);
+  border-top: 3px solid var(--amber);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(212, 135, 10, 0.12);
+}
+
+.tech-card:nth-child(4),
+.tech-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+/* Center last 2 cards */
+.tech-grid .tech-card:nth-last-child(2):nth-child(3n+1) {
+  grid-column: 1 / 2;
+}
+
+.tech-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tech-icon {
+  font-size: 1.8rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(212, 135, 10, 0.07);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.tech-card-header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown-dark);
+}
+
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  background: rgba(212, 135, 10, 0.07);
+  border: 1px solid rgba(212, 135, 10, 0.15);
+  padding: 6px 14px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.tech-card:hover .pill {
+  background: rgba(212, 135, 10, 0.1);
+  border-color: rgba(212, 135, 10, 0.3);
+  color: var(--brown-dark);
+}
+
+.tech-bar {
+  height: 2px;
+  background: linear-gradient(90deg, var(--amber), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.tech-card:hover .tech-bar {
+  transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+  .tech-stack { padding: 70px 0; }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .tech-grid { grid-template-columns: 1fr; }
+}
